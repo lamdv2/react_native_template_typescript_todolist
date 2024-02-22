@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable quotes */
 import React from 'react';
 import RowComponent from './RowComponent';
 import {Image, View} from 'react-native';
@@ -7,7 +9,7 @@ import {globalStyles} from '../styles/globalStyles';
 import {fontFamilies} from '../constants/fontFamilies';
 
 const AvatarGroup = () => {
-  const uidsLength = 10;
+  const uidLength = 10;
   const imageUrl = `https://gamek.mediacdn.vn/133514250583805952/2022/5/18/photo-1-16528608926331302726659.jpg`;
   const imageStyle = {
     width: 32,
@@ -18,7 +20,7 @@ const AvatarGroup = () => {
   };
   return (
     <RowComponent styles={{justifyContent: 'flex-start'}}>
-      {Array.from({length: uidsLength}).map(
+      {Array.from({length: uidLength}).map(
         (item, index) =>
           index < 3 && (
             <Image
@@ -29,7 +31,7 @@ const AvatarGroup = () => {
           ),
       )}
 
-      {uidsLength > 5 && (
+      {uidLength > 5 && (
         <View
           style={[
             imageStyle,
@@ -46,8 +48,8 @@ const AvatarGroup = () => {
             styles={{
               lineHeight: 19,
             }}
-            font={fontFamilies.semiBold}
-            text={`+${uidsLength - 3 > 9 ? 9 : uidsLength - 3}`}
+            font={fontFamilies.poppinsSemiBold}
+            text={`+${uidLength - 3 > 9 ? 9 : uidLength - 3}`}
           />
         </View>
       )}

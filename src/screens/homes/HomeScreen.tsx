@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {
   Add,
   Edit2,
@@ -10,8 +11,6 @@ import React from 'react';
 import {TouchableOpacity, View} from 'react-native';
 import AvatarGroup from '../../components/AvatarGroup';
 import CardComponent from '../../components/CardComponent';
-import CardImageConponent from '../../components/CardImageConponent';
-import CicularComponent from '../../components/CicularComponent';
 import Container from '../../components/Container';
 import ProgressBarComponent from '../../components/ProgressBarComponent';
 import RowComponent from '../../components/RowComponent';
@@ -24,9 +23,11 @@ import {colors} from '../../constants/colors';
 import {fontFamilies} from '../../constants/fontFamilies';
 import {globalStyles} from '../../styles/globalStyles';
 import auth from '@react-native-firebase/auth';
+import CircularComponent from '../../components/CircularComponent';
+import CardImageComponent from '../../components/CardImageComponent';
 
 const HomeScreen = ({navigation}: any) => {
-  const handleSingout = async () => {
+  const handleSignOut = async () => {
     await auth().signOut();
   };
 
@@ -48,7 +49,7 @@ const HomeScreen = ({navigation}: any) => {
               <TextComponent text="Hi, Jason" />
               <TitleComponent text="Be Productive today" />
             </View>
-            <TouchableOpacity onPress={handleSingout}>
+            <TouchableOpacity onPress={handleSignOut}>
               <Logout size={22} color="coral" />
             </TouchableOpacity>
           </RowComponent>
@@ -76,7 +77,7 @@ const HomeScreen = ({navigation}: any) => {
                 </RowComponent>
               </View>
               <View>
-                <CicularComponent value={80} />
+                <CircularComponent value={80} />
               </View>
             </RowComponent>
           </CardComponent>
@@ -84,7 +85,7 @@ const HomeScreen = ({navigation}: any) => {
         <SectionComponent>
           <RowComponent styles={{alignItems: 'flex-start'}}>
             <View style={{flex: 1}}>
-              <CardImageConponent>
+              <CardImageComponent>
                 <TouchableOpacity
                   onPress={() => {}}
                   style={globalStyles.iconContainer}>
@@ -106,11 +107,11 @@ const HomeScreen = ({navigation}: any) => {
                   size={12}
                   color={colors.desc}
                 />
-              </CardImageConponent>
+              </CardImageComponent>
             </View>
             <SpaceComponent width={16} />
             <View style={{flex: 1}}>
-              <CardImageConponent color="rgba(33, 150, 243, 0.9)">
+              <CardImageComponent color="rgba(33, 150, 243, 0.9)">
                 <TouchableOpacity
                   onPress={() => {}}
                   style={globalStyles.iconContainer}>
@@ -119,10 +120,10 @@ const HomeScreen = ({navigation}: any) => {
                 <TitleComponent text="API Payment" size={18} />
                 <AvatarGroup />
                 <ProgressBarComponent percent="40%" color="#A2F068" />
-              </CardImageConponent>
+              </CardImageComponent>
 
               <SpaceComponent height={16} />
-              <CardImageConponent color="rgba(18, 181, 22, 0.9)">
+              <CardImageComponent color="rgba(18, 181, 22, 0.9)">
                 <TouchableOpacity
                   onPress={() => {}}
                   style={globalStyles.iconContainer}>
@@ -130,20 +131,20 @@ const HomeScreen = ({navigation}: any) => {
                 </TouchableOpacity>
                 <TitleComponent text="Update work" />
                 <TextComponent text="Revision home page" size={13} />
-              </CardImageConponent>
+              </CardImageComponent>
             </View>
           </RowComponent>
         </SectionComponent>
         <SectionComponent>
           <TextComponent
             flex={1}
-            font={fontFamilies.bold}
+            font={fontFamilies.poppinsBold}
             size={21}
-            text="Urgents tasks"
+            text="Urgent tasks"
           />
           <CardComponent>
             <RowComponent>
-              <CicularComponent value={40} radius={36} />
+              <CircularComponent value={40} radius={36} />
               <View
                 style={{flex: 1, justifyContent: 'center', paddingLeft: 12}}>
                 <TextComponent text="Title of task" />

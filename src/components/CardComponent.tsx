@@ -1,4 +1,6 @@
-import {View, Text, StyleProp, ViewStyle} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import {View, StyleProp, ViewStyle} from 'react-native';
 import React, {ReactNode} from 'react';
 import {globalStyles} from '../styles/globalStyles';
 

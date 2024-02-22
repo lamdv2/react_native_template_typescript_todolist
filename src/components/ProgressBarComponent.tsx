@@ -1,4 +1,5 @@
-import {View, Text, DimensionValue} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import {View, DimensionValue} from 'react-native';
 import React from 'react';
 import {colors} from '../constants/colors';
 import RowComponent from './RowComponent';
@@ -37,7 +38,7 @@ const ProgressBarComponent = (props: Props) => {
       <RowComponent styles={{justifyContent: 'space-between', marginTop: 4}}>
         <TextComponent text="Progress" size={12} />
         <TextComponent
-          font={fontFamilies.bold}
+          font={fontFamilies.poppinsBold}
           text={`${percent}`}
           size={12}
           flex={0}

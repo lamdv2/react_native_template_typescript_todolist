@@ -1,4 +1,5 @@
-import {View, Text, ImageBackground} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import {View, ImageBackground} from 'react-native';
 import React, {ReactNode} from 'react';
 import {globalStyles} from '../styles/globalStyles';
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   color?: string;
 }
 
-const CardImageConponent = (props: Props) => {
+const CardImageComponent = (props: Props) => {
   const {children, color} = props;
 
   return (
@@ -29,4 +30,4 @@ const CardImageConponent = (props: Props) => {
   );
 };
 
-export default CardImageConponent;
+export default CardImageComponent;

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {ReactNode, useState} from 'react';
 import {
   KeyboardTypeOptions,
@@ -5,12 +6,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import {colors} from '../constants/colors';
+// import AntDesign from 'react-native-vector-icons/AntDesign';
+// import {colors} from '../constants/colors';
 import {globalStyles} from '../styles/globalStyles';
 import RowComponent from './RowComponent';
 import TitleComponent from './TitleComponent';
-import {Eye, EyeSlash} from 'iconsax-react-native';
+// import {Eye, EyeSlash} from 'iconsax-react-native';
 
 interface Props {
   value: string;
@@ -84,17 +85,17 @@ const InputComponent = (props: Props) => {
 
         {allowClear && value && (
           <TouchableOpacity onPress={() => onChange('')}>
-            <AntDesign name="close" size={20} color={colors.white} />
+            {/* <AntDesign name="close" size={20} color={colors.white} /> */}
           </TouchableOpacity>
         )}
 
         {isPassword && (
           <TouchableOpacity onPress={() => setShowPass(!showPass)}>
-            {showPass ? (
+            {/* {showPass ? (
               <EyeSlash size={20} color={colors.desc} />
             ) : (
               <Eye size={20} color={colors.desc} />
-            )}
+            )} */}
           </TouchableOpacity>
         )}
       </RowComponent>

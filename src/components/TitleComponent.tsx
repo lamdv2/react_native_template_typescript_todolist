@@ -1,4 +1,3 @@
-import {View, Text} from 'react-native';
 import React from 'react';
 import TextComponent from './TextComponent';
 import {fontFamilies} from '../constants/fontFamilies';
@@ -17,7 +16,7 @@ const TitleComponent = (props: Props) => {
   return (
     <TextComponent
       size={size ?? 20}
-      font={font ?? fontFamilies.semiBold}
+      font={font ?? fontFamilies.poppinsSemiBold}
       color={color}
       text={text}
       flex={flex ?? 1}

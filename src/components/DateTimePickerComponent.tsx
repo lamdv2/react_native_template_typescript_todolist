@@ -1,4 +1,5 @@
-import {View, Text, Modal, Button, Dimensions} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import {View, Modal, Button} from 'react-native';
 import React, {useState} from 'react';
 import TitleComponent from './TitleComponent';
 import RowComponent from './RowComponent';

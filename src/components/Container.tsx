@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react-native/no-inline-styles */
 import {ArrowLeft2} from 'iconsax-react-native';
 import React, {ReactNode} from 'react';
 import {ScrollView, TouchableOpacity, View} from 'react-native';
@@ -41,7 +43,7 @@ const Container = (props: Props) => {
           {title && (
             <TextComponent
               flex={0}
-              font={fontFamilies.bold}
+              font={fontFamilies.poppinsBold}
               size={16}
               text={title}
               styles={{textAlign: 'center', marginLeft: back ? -24 : 0}}

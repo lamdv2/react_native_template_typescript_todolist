@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import CircularProgress from 'react-native-circular-progress-indicator';
 import {colors} from '../constants/colors';
@@ -10,7 +11,7 @@ interface Props {
   radius?: number;
 }
 
-const CicularComponent = (props: Props) => {
+const CircularComponent = (props: Props) => {
   const {color, value, maxValue, radius} = props;
   return (
     <CircularProgress
@@ -31,4 +32,4 @@ const CicularComponent = (props: Props) => {
   );
 };
 
-export default CicularComponent;
+export default CircularComponent;

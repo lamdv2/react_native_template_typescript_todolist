@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import React, {ReactNode} from 'react';
 import TextComponent from './TextComponent';
