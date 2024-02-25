@@ -1,7 +1,7 @@
 import React from 'react';
-import TestComponent from './src/components/TestComponent';
 import {StatusBar} from 'react-native';
-import TextComponent from './src/components/TextComponent';
+import {colors} from './src/constants/colors';
+import TestComponent from './src/components/TestComponent';
 
 const App = () => {
   return (
@@ -9,9 +9,9 @@ const App = () => {
       <StatusBar
         translucent
         barStyle={'light-content'}
-        backgroundColor="transparent"
+        backgroundColor={colors.bgColor}
       />
-      <TextComponent text="fd" />
+      <TestComponent />
     </>
   );
 };
